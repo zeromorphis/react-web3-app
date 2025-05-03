@@ -1,0 +1,108 @@
+.homePage5_container {
+    width: 100%;
+    height: 1000px;
+    background-image: url('@/assets/images/home/home-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #fff;
+    padding: 175px 344px 0;
+
+    .context {
+        width: 100%;
+        height: 100%;
+        background-image: url('@/assets/images/home/empty-dark@2x.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        justify-content: center;
+        padding: 92px 72px 209px 84px;
+        position: relative;
+
+        .title {
+            height: 63px;
+            position: absolute;
+            top: -63px;
+
+            img {
+                height: 63px;
+            }
+        }
+
+        .echarts_wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+
+            .echarts_box {
+                width: 100%;
+                height: 100%;
+            }
+
+            .chart_list_info {
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                animation: bounceInLeft 1.2s;
+                animation-iteration-count: 1;
+
+                ul {
+                    width: 460px;
+
+                    li {
+                        height: 42px;
+                        border-top: 1px solid #535353;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .left {
+                            display: flex;
+                            align-items: center;
+
+                            .kuai {
+                                width: 28px;
+                                height: 28px;
+                            }
+
+                            .lable {
+                                margin-left: 13px;
+                                font-size: 16px;
+                                font-family: 'Open-Sans-Bold';
+                                font-weight: bold;
+                                color: #ffffff;
+                            }
+                        }
+
+                        p {
+                            font-size: 21px;
+                            font-family: 'Hansief';
+                            font-weight: 400;
+                            color: #ffffff;
+                        }
+                    }
+
+                    li:last-child {
+                        border-bottom: 1px solid #535353;
+                    }
+                }
+            }
+
+            @keyframes bounceInLeft {
+                0% {
+                    opacity: 0.5;
+                    transform: translateX(-200px);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,289 @@
+.web_menu_container {
+    width: 100%;
+    height: 72px;
+    // background-color: "transparent";
+    background-color: #07080B;
+    padding: 0 35px 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+
+    .menu {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .logo {
+            width: 152px;
+            height: 60px;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        }
+
+        .list {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .item {
+                height: 100%;
+                font-size: 16px;
+                font-family: "Hansief";
+                font-weight: 400;
+                color: #ffffff;
+                margin-left: 52px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                .mingzi {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .children {
+                    width: 150px;
+                    position: absolute;
+                    top: 72px;
+                    left: 50%;
+                    margin-left: -75px;
+                    background: rgba(60, 60, 60, 0.52);
+                    color: #fff;
+
+                    .child_item {
+                        width: 100%;
+                        height: 40px;
+                        display: block;
+                        font-size: 16px;
+                        font-family: "Hansief";
+                        font-weight: 400;
+                        color: #FFF;
+                        text-align: center;
+                        line-height: 40px;
+                    }
+
+                    .child_item:hover {
+                        color: #367CFF;
+                    }
+                }
+            }
+
+            .item:hover {
+                color: #367CFF;
+            }
+
+            .active {
+                color: #367CFF;
+            }
+        }
+    }
+
+    .operate {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        .login_btn {
+            width: 211px;
+            height: 35px;
+            background: #367CFF;
+            box-shadow: 0px 0px 6px 1px rgba(126, 165, 255, 0.8275);
+            border: 1px solid transparent;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: "Hansief";
+            font-weight: 400;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        .myWallet {
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            .myWallet_info {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+
+                .balance_wrap {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        width: 17px;
+                        display: block;
+                    }
+
+                    .balance {
+                        display: flex;
+                        align-items: center;
+                        font-size: 16px;
+                        // font-family: Avenir-Heavy, Avenir;
+                        font-family: "Bertha-Regular";
+                        font-weight: 800;
+                        color: #f5c638;
+                        margin-left: 5px;
+                    }
+                }
+
+                .address_wrap {
+                    display: flex;
+                    align-items: center;
+
+                    .address {
+                        font-size: 16px;
+                        // font-family: Avenir-Heavy, Avenir;
+                        font-family: "Bertha-Regular";
+                        font-weight: 800;
+                        color: #ffffff;
+                    }
+
+                    img {
+                        width: 17px;
+                        display: block;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+
+                .logOut_box {
+                    width: 350px;
+                    height: 180px;
+                    background: #00000e;
+                    border-radius: 15px;
+                    border: 1px solid #36374b;
+                    position: absolute;
+                    top: 72px;
+                    left: 50%;
+                    margin-left: -175px;
+                    padding: 0 15px;
+
+                    .user_add {
+                        height: 45px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-bottom: 1px solid #36374b;
+
+                        .us_tt {
+                            font-size: 16px;
+                            // font-family: Avenir-Heavy, Avenir;
+                            font-family: "Bertha-Regular";
+                            font-weight: 800;
+                            color: #ffffff;
+                        }
+
+                        .us_logo {
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            // font-family: Avenir-Heavy, Avenir;
+                            font-family: "Bertha-Regular";
+                            font-weight: 800;
+                            color: #ffffff;
+
+                            img {
+                                width: 25px;
+                                margin-right: 5px;
+                            }
+                        }
+
+                        .copy_bsc {
+                            display: flex;
+                            align-items: center;
+                            font-size: 16px;
+                            // font-family: Avenir-Heavy, Avenir;
+                            font-family: "Bertha-Regular";
+                            font-weight: 800;
+                            color: #ffffff;
+
+                            .b_circle {
+                                height: 8px;
+                                width: 8px;
+                                background: #27d1d1;
+                                border-radius: 50%;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+
+                    .disconnect {
+                        width: 100%;
+                        border: 1px solid #ff5c5c;
+                        border-radius: 8px;
+                        height: 45px;
+                        margin-top: 20px;
+                        line-height: 45px;
+                        cursor: pointer;
+                        text-align: center;
+                        font-size: 16px;
+                        // font-family: Avenir-Heavy, Avenir;
+                        font-family: "Bertha-Regular";
+                        font-weight: 800;
+                        color: #ffffff;
+                    }
+
+                    .disconnect:hover {
+                        border: 1px solid #fff;
+                        background: #ff5c5c;
+                        color: #ffffff;
+                    }
+
+                    .triangle {
+                        width: 0;
+                        height: 0;
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-bottom: 8px solid #00000e;
+                        position: absolute;
+                        top: -8px;
+                        left: 163px;
+                    }
+
+                    .triangle:after {
+                        content: "";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        bottom: -9px;
+                        left: -11px;
+                        z-index: -1;
+                        border-left: 11px solid transparent;
+                        border-right: 11px solid transparent;
+                        border-bottom: 11px solid #36374b;
+                    }
+                }
+            }
+
+            .myWallet_btn {
+                width: 148px;
+                height: 35px;
+                background: #367CFF;
+                box-shadow: 0px 0px 6px 1px rgba(126, 165, 255, 0.8275);
+                border-radius: 6px 6px 6px 6px;
+                font-size: 16px;
+                font-family: "Hansief";
+                font-weight: 400;
+                color: #ffffff;
+                line-height: 35px;
+                text-align: center;
+                margin-left: 17px;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,209 @@
+.binding_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .main_wrap {
+        width: 1160px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .unbound {
+            width: 505px;
+            background: #000E1F;
+            border-radius: 16px 16px 16px 16px;
+            border: 1px solid #003352;
+            padding: 40px;
+
+            .title {
+                font-size: 18px;
+                font-family: 'Hansief';
+                font-weight: 400;
+                color: #FFFFFF;
+                text-align: center;
+            }
+
+            .bound-messages {
+                margin-top: 40px;
+
+                .ant-input-affix-wrapper {
+                    background: #000415 !important;
+                    height: 43px !important;
+                    border-radius: 9px !important;
+                    border: 1px solid #36374B !important;
+                }
+
+                .ant-input-affix-wrapper-status-error {
+                    background: #000415 !important;
+                }
+
+                .ant-input-affix-wrapper-focused {
+                    background: #000415 !important;
+                }
+
+                .ant-input {
+                    color: #fff;
+                    font-size: 17px;
+                    font-family: 'DIN-Alternate-Bold';
+                    background: transparent !important;
+                    border: none;
+                    box-shadow: none;
+                }
+
+                .anticon {
+                    font-size: 17px;
+                    color: #8A8A8A;
+                }
+
+                .ant-form-item {
+                    margin-bottom: 35px;
+                }
+
+                .ant-form-item:last-child {
+                    margin-bottom: 0;
+                }
+
+                .ant-form-item-control-input-content {
+                    display: flex;
+                    justify-content: end;
+                }
+
+                .btn {
+                    width: 116px;
+                    height: 43px;
+                    background: #367CFF;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    font-family: 'DIN-Alternate-Bold';
+                    font-weight: bold;
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        .bound {
+            width: 505px;
+            background: #000E1F;
+            border-radius: 16px 16px 16px 16px;
+            border: 1px solid #003352;
+            padding: 32px;
+
+            .avatar {
+                width: 80px;
+                height: 80px;
+                border-radius: 10px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .info_item {
+                display: flex;
+                align-items: center;
+                margin-top: 25px;
+
+                img {
+                    width: 36px;
+                    height: 24px;
+                }
+
+                .icon {
+                    font-size: 22px;
+                    font-family: 'Hansief';
+                    color: #FFF;
+                }
+
+                p {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 23px;
+
+                    span:first-child {
+                        font-size: 14px;
+                        font-family: 'Hansief';
+                        font-weight: 400;
+                        color: #3472F4;
+                    }
+
+                    span:last-child {
+                        font-size: 20px;
+                        font-family: 'DIN-Alternate-Bold';
+                        font-weight: 500;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 弹框
+.model-model-binding {
+    width: 480px !important;
+
+    .ant-modal-content {
+        width: 100%;
+        background: #2B2B2B;
+        border-radius: 12px;
+
+        .ant-modal-body {
+            width: 100%;
+            padding: 35px;
+
+            .model_box {
+                .title {
+                    font-size: 18px;
+                    font-family: 'DIN-Alternate-Bold';
+                    color: #FFFFFF;
+                    text-align: center;
+                    margin-bottom: 24px;
+                }
+
+                .des {
+                    font-size: 16px;
+                    font-family: 'DIN-Alternate-Bold';
+                    color: #FFF;
+                    text-align: center;
+                }
+
+                .btn_wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+
+                    .btn {
+                        width: 192px;
+                        height: 43px;
+                        border-radius: 6px;
+
+                        span {
+                            font-size: 16px;
+                            font-family: 'DIN-Alternate-Bold';
+                            font-weight: bold;
+                            color: #FFFFFF;
+                        }
+                    }
+
+                    .btn1 {
+                        background: transparent;
+                        border: 1px solid #367CFF;
+                    }
+
+                    .btn2 {
+                        background: #367CFF;
+                    }
+
+                }
+
+            }
+        }
+    }
+}

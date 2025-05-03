@@ -1,0 +1,107 @@
+.homePage3_container {
+    width: 100%;
+    height: 1618px;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .homePage3_box {
+        width: 802px;
+        position: absolute;
+
+        .icon_wrap {
+            display: flex;
+            flex-wrap: wrap;
+
+            .icon_item {
+                width: 190px;
+                height: 190px;
+                flex-shrink: 0;
+                border-radius: 30px;
+                overflow: hidden;
+                margin-right: 14px;
+                margin-top: 14px;
+
+                img,
+                .noimg {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .icon_item:nth-child(4n) {
+                margin-right: 0;
+            }
+
+            .icon_item:nth-child(-n + 4) {
+                margin-top: 0;
+            }
+
+            .icon_item_active {
+                /*透视距离 */
+                // perspective: 700px;
+                /* 开启子元素的动画显示，否则会和父元素一样 */
+                /* 使用动画，每2秒旋转一圈，匀速 */
+                animation-name: rote360;
+                animation-duration: 1.4s;
+                animation-iteration-count: 1;
+            }
+
+            /*定义绕Y轴的3d正向旋转动画 */
+            @keyframes rote360 {
+                0% {
+                    transform: rotateY(0deg);
+                }
+
+                25% {
+                    transform: rotateY(90deg);
+                }
+
+                50% {
+                    transform: rotateY(180deg);
+                }
+
+                75% {
+                    transform: rotateY(270deg);
+                }
+
+                100% {
+                    transform: rotateY(360deg);
+                }
+            }
+        }
+
+        .right_txt_box {
+            width: 562px;
+            height: 394px;
+            position: absolute;
+            top: 408px;
+            left: 204px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            img {
+                width: 495px;
+                display: block;
+            }
+
+            .txt_wrap {
+                margin-top: 45px;
+
+                p {
+                    padding-left: 24px;
+                    font-size: 24px;
+                    font-family: 'Open-Sans';
+                    font-weight: 400;
+                    color: #ffffff;
+                    line-height: 36px;
+                }
+            }
+        }
+    }
+}

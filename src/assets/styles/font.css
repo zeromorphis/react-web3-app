@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Hansief';
+    src: url('../fonts/Hansief.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('../fonts/Open-Sans.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-Sans-Bold';
+    src: url('../fonts/Open-Sans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open-Sans-Extrabold-Italic';
+    src: url('../fonts/Open-Sans-Extrabold-Italic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN-Alternate-Bold';
+    src: url('../fonts/DIN-Alternate-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bertha-Regular';
+    src: url('../font/Bertha-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}

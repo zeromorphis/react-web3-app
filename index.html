@@ -1,0 +1,148 @@
+<!--
+ * @Author: 言棠
+ * @version: 1024
+ * @Descripttion: 当时只道是寻常
+ * @Date: 2025-04-30 20:05:28
+ * @LastEditTime: 2025-05-03 18:09:20
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/ico" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%- title %></title>
+</head>
+
+<body>
+  <div id="root">
+    <style>
+      html,
+      body,
+      #root {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+      }
+
+      .first-loading-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .first-loading-wrap .loading-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6vh;
+      }
+
+      .dot {
+        position: relative;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 5vh;
+        height: 5vh;
+        transform: rotate(45deg);
+        animation: ant-rotate 1.2s infinite linear;
+      }
+
+      .dot i {
+        position: absolute;
+        display: block;
+        width: 2vh;
+        height: 2vh;
+        background-color: #FFF;
+        border-radius: 100%;
+        opacity: 0.3;
+        transform: scale(0.75);
+        transform-origin: 50% 50%;
+        animation: ant-spin-move 1s infinite linear alternate;
+      }
+
+      .dot i:nth-child(1) {
+        top: 0;
+        left: 0;
+      }
+
+      .dot i:nth-child(2) {
+        top: 0;
+        right: 0;
+        animation-delay: 0.4s;
+      }
+
+      .dot i:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        animation-delay: 0.8s;
+      }
+
+      .dot i:nth-child(4) {
+        bottom: 0;
+        left: 0;
+        animation-delay: 1.2s;
+      }
+
+      @keyframes ant-rotate {
+        to {
+          transform: rotate(405deg);
+        }
+      }
+
+      @keyframes ant-spin-move {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+    <div class="first-loading-wrap">
+      <div class="loading-wrap">
+        <span class="dot dot-spin"><i></i><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+<script>
+  console.log(
+    "                            _ooOoo_" + '\n' +
+    "                           o8888888o" + '\n' +
+    '                           88" . "88' + '\n' +
+    "                           (| -_- |)" + '\n' +
+    "                            O\\ = /O" + '\n' +
+    "                        ____/`---'\\____" + '\n' +
+    "                      .   ' \\\\| |// `." + '\n' +
+    "                       / \\||| : |||// \\" + '\n' +
+    "                     / _||||| -:- |||||- \\" + '\n' +
+    "                       | | \\\\\\ - /// | |" + '\n' +
+    "                     | \\_| ''\\---/'' |_/ |" + '\n' +
+    "                      \\ .-\\__ `-` ___/-. /" + '\n' +
+    "                   ___`. .' /--.--\\ `. . __" + '\n' +
+    "                .\"\" '< `.___\\_<|>_/___.' >'\"\"." + '\n' +
+    "               | | : `- \\`.;`\\ _ /`;.`/ - ` : | |" + '\n' +
+    "                 \\ \\ `-. \\_ __\\ /__ _/ .-` / /" + '\n' +
+    "         ======`-.____`-.___\\_____/___.-`____.-'======" + '\n' +
+    "                            `=---='" + '\n' +
+    "" + '\n' +
+    "         ............................................." + '\n' +
+    "                   佛祖镇楼            BUG辟易" + '\n' +
+    "          佛曰:" + '\n' +
+    "                   写字楼里写字间，写字间里程序员；" + '\n' +
+    "                   程序人员写程序，又拿程序换酒钱。" + '\n' +
+    "                   酒醒只在网上坐，酒醉还来网下眠；" + '\n' +
+    "                   酒醉酒醒日复日，网上网下年复年。" + '\n' +
+    "                   但愿老死电脑间，不愿鞠躬老板前；" + '\n' +
+    "                   奔驰宝马贵者趣，公交自行程序员。" + '\n' +
+    "                   别人笑我忒疯癫，我笑自己命太贱；" + '\n' +
+    "                   不见满街漂亮妹，哪个归得程序员？"
+  )
+</script>
+
+</html>
