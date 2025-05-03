@@ -1,8 +1,13 @@
 {
   "name": "react-app",
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "19.0.0",
+  "description": "react19 + vite6 + ts + antd + redux5",
+  "author": {
+    "name": "言棠",
+    "email": "zeromorphis@gmail.com"
+  },
   "scripts": {
     "dev": "vite",
     "serve": "npm run dev",
