@@ -1,0 +1,5 @@
+@use '@/styles/reset.less';
+@use '@/styles/common.less';
+@use '@/styles/font.css';
+@use 'normalize.css';
+@use 'nantd/dist/reset.css';
