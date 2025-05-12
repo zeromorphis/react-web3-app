@@ -76,13 +76,13 @@ react-web3-app
 ├─ .env.test              # 测试环境配置
 ├─ .gitignore             # git 提交忽略
 ├─ index.html             # 入口 html
-├─ package-lock.json      # 依赖包包版本锁
+├─ package-lock.json      # npm 依赖包包版本锁
 ├─ package.json           # 依赖包管理
 ├─ README.md              # README 介绍
 ├─ tsconfig.json          # typescript 全局配置
 ├─ tsconfig.node.json     # node 环境配置
 ├─ vite.config.ts         # vite 全局配置文件
-└─ yarn.lock              # yarn 锁文件
+└─ yarn.lock              # yarn 依赖包包版本锁
 ```
 
 ### 浏览器支持 🌎
