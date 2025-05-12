@@ -3,14 +3,15 @@
  * @version: 1024
  * @Descripttion: 当时只道是寻常
  * @Date: 2025-05-03 17:33:21
- * @LastEditTime: 2025-05-03 17:39:31
+ * @LastEditTime: 2025-05-12 14:51:53
  */
 import axios, { AxiosInstance, AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import { showFullScreenLoading, tryHideFullScreenLoading } from "@/config/serviceLoading";
 import NProgress from "@/utils/nprogress";
 import type { ResultData } from "@/api/interface";
-import { AxiosCanceler } from "./helper/axiosCancel";
+import type { ResultEnum } from "@/enums/httpEnum";
 import { checkStatus } from "./helper/checkStatus";
+import { AxiosCanceler } from "./helper/axiosCancel";
 import { store } from "@/redux";
 
 const axiosCanceler = new AxiosCanceler();
@@ -61,7 +62,7 @@ class RequestHttp {
 				axiosCanceler.removePending(config);
 				tryHideFullScreenLoading();
 				// * 全局错误信息拦截（防止下载文件得时候返回数据流，没有code，直接报错）
-				if (data.code && data.code !== 200) {
+				if (data.code && data.code !== ResultEnum.SUCCESS) {
 					return Promise.reject(data);
 				}
 				// * 成功请求（在页面上除非特殊情况，否则不用处理失败逻辑）
