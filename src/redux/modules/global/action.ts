@@ -11,9 +11,3 @@ export const setLastTime = (lastTime: number) => ({
 	type: types.SET_LASTTIME,
 	lastTime
 });
-
-// * setExchangeRate 
-export const setExchangeRate = (exchangeRate: string) => ({
-	type: types.SET_EXCHANGERATE,
-	exchangeRate
-});

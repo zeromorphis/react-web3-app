@@ -1,10 +1,10 @@
 /*
  * @version: 3.0.0
  * @Date: 2022-08-31 21:08:25
- * @LastEditors: 言棠
+ * @LastEditors: YT
  * @Descripttion: 人人都说顶峰相见，路边的水沟人满为患
- * @LastEditTime: 2023-10-22 20:34:45
- * @FilePath: /dev/react-ts-app/src/redux/modules/user/reducer.ts
+ * @LastEditTime: 2025-05-13 20:04:23
+ * @FilePath: /dev/web3-app/src/redux/modules/user/reducer.ts
  */
 import { AnyAction } from "redux";
 import { produce } from "immer";
@@ -14,11 +14,8 @@ import * as types from "@/redux/mutation-types";
 const userState: UserState = {
 	token: "",
 	address: undefined,
+	balance: undefined,
 	isLogin: false,
-	bnbBalance: undefined,
-	bindAccountCode: undefined,
-	isBindAccount: false,
-	gameAccount: undefined,
 };
 
 // user reducer
@@ -32,31 +29,14 @@ const user = (state: UserState = userState, action: AnyAction) =>
 				draftState.address = action.address;
 				draftState.isLogin = action.address ? true : false;
 				break;
-			case types.SET_BNBBALANCE:
-				draftState.bnbBalance = action.bnbBalance;
-				break;
-			case types.SET_BINDACCOUNTCODE:
-				draftState.bindAccountCode = action.bindAccountCode;
-				draftState.isBindAccount = action.bindAccountCode == 520 ? false : action.bindAccountCode == undefined ? false : action.bindAccountCode == "ERR_NETWORK" ? false : true;
-				break;
-			case types.SET_GAMEACCOUNT:
-				draftState.gameAccount = action.gameAccount;
-				break;
-			case types.RESET_USERSTATE:
-				draftState.token = "";
-				draftState.address = undefined;
-				draftState.isLogin = false;
-				draftState.bnbBalance = undefined;
-				draftState.bindAccountCode = undefined;
-				draftState.gameAccount = undefined;
+				case types.SET_BALANCE:
+				draftState.balance = action.balance;
 				break;
 			case types.SIGNOUT:
 				draftState.token = "";
 				draftState.address = undefined;
+				draftState.balance = undefined;
 				draftState.isLogin = false;
-				draftState.bnbBalance = undefined;
-				draftState.bindAccountCode = undefined;
-				draftState.gameAccount = undefined;
 				break;
 			default:
 				return draftState;

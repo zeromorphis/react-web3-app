@@ -11,6 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from "react-redux";
 import { store, persistor } from "@/redux";
 import App from './App'
+import '@ant-design/v5-patch-for-react-19';
 import 'lib-flexible';//postcss-pxtorem
 import 'virtual:svg-icons-register';//svg-icons注册脚本
 import './index.less';//初始化配置样式

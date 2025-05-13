@@ -62,6 +62,7 @@ react-web3-app
 │  ├─ language            # 语言国际化
 │  ├─ redux               # redux store
 │  ├─ router              # 路由管理
+│  ├─ sdk                 # web3相关操作
 │  ├─ styles              # 全局样式
 │  ├─ typings             # 全局 ts 声明
 │  ├─ utils               # 工具库
