@@ -4,14 +4,14 @@
  * @Author: 言棠
  * @Date: 2022-09-14 12:03:51
  * @LastEditors: YT
- * @LastEditTime: 2025-05-14 16:22:48
+ * @LastEditTime: 2025-05-14 19:46:35
  */
 import { useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux";
 import { store } from "@/redux";
-import { setLastTime } from "@/redux/modules/global/globalSlice";
-import { signOut } from "@/redux/modules/user/userSlice";
+import { setLastTime } from "@/redux/modules/global";
+import { signOut } from "@/redux/modules/user";
 /**
  * @description 监测用户指定时间内有无操作，超时即退出登录
  */

@@ -4,14 +4,14 @@
  * @Descripttion: 人人都说顶峰相见，路边的水沟人满为患
  * @Date: 2023-10-21 23:48:43
  * @LastEditors: YT
- * @LastEditTime: 2025-05-13 20:09:16
+ * @LastEditTime: 2025-05-14 20:04:44
  */
 import { ethers, Contract, formatUnits, parseUnits, toBeHex } from "ethers";
 
 import ExampleABI from "@/sdk/abi/Example.json";
 
 import { store } from "@/redux";
-import { setAddress, setBalance, signOut } from "@/redux/modules/user/action";
+import { setAddress, setBalance, signOut } from "@/redux/modules/user";
 
 const CHAIN_BROWSER: any = {
   8453: "https://basescan.org", //正式链浏览器

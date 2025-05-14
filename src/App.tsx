@@ -3,14 +3,14 @@
  * @Date: 2022-08-31 20:18:16
  * @LastEditors: YT
  * @Descripttion: 人人都说顶峰相见，路边的水沟人满为患
- * @LastEditTime: 2025-05-14 16:03:52
- * @FilePath: \start\react-web3-app\src\App.tsx
+ * @LastEditTime: 2025-05-14 20:04:57
+ * @FilePath: /dev/react-web3-app/src/App.tsx
  */
 import { useState, useEffect } from "react";
 import { BrowserRouter, HashRouter } from "react-router-dom"; //hash路由：HashRouter history路由：BrowserRouter
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux';
-import { setLanguage } from '@/redux/modules/global/globalSlice';
+import { setLanguage } from '@/redux/modules/global';
 import { AppDispatch } from '@/redux';
 import { getBrowserLang } from "@/utils/tools";
 import AuthRouter from "@/router/utils/authRouter";
@@ -60,6 +60,4 @@ const App = () => {
   );
 };
 
-const mapStateToProps = (state: any) => state;
-const mapDispatchToProps = { setLanguage };
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

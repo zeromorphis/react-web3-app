@@ -4,12 +4,12 @@
  * @Author: 言棠
  * @Date: 2022-09-13 14:44:26
  * @LastEditors: YT
- * @LastEditTime: 2025-05-13 20:31:44
+ * @LastEditTime: 2025-05-14 20:03:45
  */
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux';
-import { signOut } from '@/redux/modules/user/userSlice';
+import { signOut } from '@/redux/modules/user';
 import { AppDispatch } from '@/redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from 'antd';
