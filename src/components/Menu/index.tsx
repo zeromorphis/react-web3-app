@@ -7,12 +7,14 @@
  * @LastEditTime: 2025-05-13 20:31:44
  */
 import { useState, useEffect } from 'react'
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux';
+import { signOut } from '@/redux/modules/user/userSlice';
+import { AppDispatch } from '@/redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from 'antd';
 import { CaretDownOutlined, CaretUpOutlined } from '@ant-design/icons';
 import { HOME_URL } from "@/config/config";
-import { signOut } from "@/redux/modules/user/action";
 import { interceptStr, interceptDecimal } from "@/utils/common";
 import sdk from "@/sdk/chainweb3";
 // images
@@ -23,8 +25,9 @@ import metamask from '@/assets/images/menu/metamask.png'
 
 import './index.less'
 
-function Menu(props: any) {
-  const { address, isLogin, balance, signOut } = props;
+function Menu() {
+  const dispatch = useDispatch<AppDispatch>();
+  const { address, isLogin, balance } = useSelector((state: RootState) => state.user);
   const navigate = useNavigate();
   const location = useLocation();
   const [showLoginModel, setShowLoginModel] = useState<boolean>(false);
@@ -144,16 +147,8 @@ function Menu(props: any) {
   // 钱包注销操作
   const disconnect = async () => {
     console.warn("钱包注销操作");
-    signOut();
+    dispatch(signOut());
   };
-
-  
-
-  // 根据路由变化刷新余额
-  // refreshBalance();
-
-  // 监听网络与账户变化
-  // networkListening();
 
   return (
     <div className='web_menu_container' >
@@ -230,4 +225,4 @@ function Menu(props: any) {
   )
 }
 
-export default connect((state: any) => state.user, { signOut })(Menu);
+export default Menu;

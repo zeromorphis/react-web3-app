@@ -1,25 +1,35 @@
+/*
+ * @Author: YT
+ * @Date: 2025-05-09 09:05:52
+ * @LastEditors: YT
+ * @LastEditTime: 2025-05-14 15:57:53
+ * @Description: 当时只道是寻常
+ * @FilePath: \start\react-web3-app\src\components\Language\index.tsx
+ */
 
 import { Dropdown, Menu, Space, Typography } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
-import { connect } from "react-redux";
-import { setLanguage } from "@/redux/modules/global/action";
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux';
+import { setLanguage } from '@/redux/modules/global/globalSlice';
+import { AppDispatch } from '@/redux';
 
 const Language: React.FC = (props: any) => {
-	const { language, setLanguage } = props;
-
+const dispatch = useDispatch<AppDispatch>();
+  const { language } = useSelector((state: RootState) => state.global);
 	const menu = (
 		<Menu
 			items={[
 				{
 					key: "1",
 					label: <span>简体中文</span>,
-					onClick: () => setLanguage("zh"),
+					onClick: () => dispatch(setLanguage("zh")),
 					disabled: language === "zh"
 				},
 				{
 					key: "2",
 					label: <span>English</span>,
-					onClick: () => setLanguage("en"),
+					onClick: () => dispatch(setLanguage("en")),
 					disabled: language === "en"
 				}
 			]}
@@ -37,6 +47,4 @@ const Language: React.FC = (props: any) => {
 	);
 };
 
-const mapStateToProps = (state: any) => state.global;
-const mapDispatchToProps = { setLanguage };
-export default connect(mapStateToProps, mapDispatchToProps)(Language);
+export default Language;

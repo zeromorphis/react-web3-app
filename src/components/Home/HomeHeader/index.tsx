@@ -4,14 +4,15 @@
  * @Author: 言棠
  * @Date: 2022-09-13 14:44:26
  * @LastEditors: YT
- * @LastEditTime: 2025-05-13 20:15:43
+ * @LastEditTime: 2025-05-14 15:45:52
  */
 import { useState } from 'react'
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '@/redux';
+import { signOut } from '@/redux/modules/user/userSlice';
+import { AppDispatch } from '@/redux';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from 'antd';
-import { HOME_URL } from "@/config/config";
-import { signOut } from "@/redux/modules/user/action";
 import { interceptStr, interceptDecimal } from "@/utils/common";
 import { useGradient } from "@/hooks/useGradient";
 import sdk from "@/sdk/chainweb3";
@@ -27,10 +28,10 @@ import metamask from '@/assets/images/menu/metamask.png'
 
 import './index.less'
 
-function HomeHeader(props: any) {
-  const { address, isLogin, balance, signOut } = props;
+function HomeHeader() {
+  const dispatch = useDispatch<AppDispatch>();
+  const { address, isLogin, balance } = useSelector((state: RootState) => state.user);
   const navigate = useNavigate();
-  const location = useLocation();
   const [showLoginModel, setShowLoginModel] = useState<boolean>(false);
   const { backgroundColor } = useGradient();
   const routeList = [
@@ -62,12 +63,8 @@ function HomeHeader(props: any) {
   // 钱包注销操作
   const disconnect = async () => {
     console.warn("钱包注销操作");
-    signOut();
+    dispatch(signOut());
   };
-
-
-  // 监听网络与账户变化
-  // networkListening();
 
   return (
     <div className='homeHeader_container' style={{ backgroundColor: backgroundColor }}>
@@ -142,4 +139,4 @@ function HomeHeader(props: any) {
   )
 }
 
-export default connect((state: any) => state.user, { signOut })(HomeHeader);
+export default HomeHeader;
