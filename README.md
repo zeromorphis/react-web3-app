@@ -104,7 +104,7 @@ react-web3-app
 
 |                                        微信                                        |                                       支付宝                                       |
 | :--------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------: |
-| <img src="https://i.miji.bid/2025/05/03/005c3cf7fcb014d74c5c27da05817def.jpeg" alt="Alipay QRcode" width=170> | <img src="https://i.miji.bid/2025/05/03/d56166261b20395226d129fe2f54505e.jpeg" alt="Wechat QRcode" width=170> |
+| <img src="https://i.miji.bid/2025/05/03/d56166261b20395226d129fe2f54505e.jpeg" alt="Wechat QRcode" width=170> | <img src="https://i.miji.bid/2025/05/03/005c3cf7fcb014d74c5c27da05817def.jpeg" alt="Alipay QRcode" width=170> |
 
 ### 维护者 👨‍👨‍👦‍👦
 
