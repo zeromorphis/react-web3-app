@@ -7,24 +7,18 @@
  * @LastEditTime: 2025-05-13 20:32:10
  */
 import { useState, useEffect } from "react";
-import { connect } from "react-redux";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux";
 import { useNavigate, useLocation } from "react-router-dom";
 
 import "./index.less";
 
-const Nft = (props: any) => {
-  const { user, global } = props;
-  const { address } = user;
-  
+export default function Nft(props: any) {
+  const { address } = useSelector((state: RootState) => state.user);
+
   return (
     <>
-      <div className="nft_container">
-        { address }
-      </div>
+      <div className="nft_container">{address}</div>
     </>
   );
-};
-
-const mapStateToProps = (state: any) => state;
-const mapDispatchToProps = {};
-export default connect(mapStateToProps, mapDispatchToProps)(Nft);
+}

@@ -4,11 +4,10 @@
  * @Author: 言棠
  * @Date: 2022-09-22 10:41:53
  * @LastEditors: YT
- * @LastEditTime: 2025-05-13 20:27:29
+ * @LastEditTime: 2025-05-20 11:19:50
  */
 import { useState, useEffect } from "react";
 import { Outlet, useNavigate, useLocation } from "react-router-dom";
-import { connect } from "react-redux";
 // images
 import icon_asset from "@/assets/images/market/icon_asset@2x.png";
 import icon_asset2 from "@/assets/images/market/icon_asset2@2x.png";
@@ -91,7 +90,4 @@ const Wallet = (props: any) => {
   );
 };
 
-// const mapStateToProps = (state: any) => state.menu;
-// const mapDispatchToProps = { setAuthButtons, updateCollapse };
-// export default connect(mapStateToProps, mapDispatchToProps)(LayoutIndex);
 export default Wallet;
